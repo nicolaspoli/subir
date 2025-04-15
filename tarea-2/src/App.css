@@ -1,0 +1,78 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Contenedor principal en formato flex */
+.app-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Columna izquierda para tabla y chat */
+.left-column {
+  flex: 1;
+  min-width: 350px;
+  padding-right: 20px;
+}
+
+/* Columna derecha para el globo */
+.right-column {
+  width: 600px;
+  min-width: 300px;
+  /* Se puede ajustar el ancho si se requiere */
+}
+
+/* Encabezado */
+h1 {
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Contenedor para la tabla y el chat */
+.table-container {
+  margin-bottom: 20px;
+}
+
+/* Chat */
+.chat-container {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.chat-messages {
+  height: 300px;
+  overflow-y: scroll;
+  padding: 10px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.chat-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Contenedor para el globo */
+.globe-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* Ajuste de estilos para la tabla */
+.table-container table {
+  width: 100%;
+}

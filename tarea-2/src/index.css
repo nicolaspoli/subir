@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-column {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.right-column {
+  width: 50%;
+  min-width: 400px;
+}
