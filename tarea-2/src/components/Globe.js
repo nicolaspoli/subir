@@ -66,7 +66,7 @@ const GlobeComponent = () => {
   }, []);
 
   return (
-    <div ref={globeRef} style={{ width: '100%', height: '100vh' }} />
+    <div className="globe-container" ref={globeRef} />
   );
 };
 
