@@ -1,11 +1,11 @@
-// websocket.js
+// creo que ya ni uso esto pero me da miedo borrarlo
 let socket;
 
 export const connectWebSocket = (onMessageCallback) => {
   socket = new WebSocket('wss://tarea-2.2025-1.tallerdeintegracion.cl/connect');
 
   socket.onopen = () => {
-    console.log('✅ Conectado al WebSocket');
+    console.log('Conectado al WebSocket');
   };
 
   socket.onmessage = (event) => {
@@ -14,7 +14,7 @@ export const connectWebSocket = (onMessageCallback) => {
   };
 
   socket.onerror = (error) => {
-    console.error('❌ WebSocket error:', error);
+    console.error('WebSocket error:', error);
   };
 
   socket.onclose = (event) => {

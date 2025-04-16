@@ -1,14 +1,12 @@
-/* Estilos generales */
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f8f9fa;
-  overflow: hidden; /* evita scroll doble */
+  overflow: hidden;
 }
 
-/* Contenedor principal en formato flex */
 .app-container {
   display: flex;
   flex-direction: row;
@@ -17,7 +15,6 @@ html, body {
   overflow: hidden;
 }
 
-/* Columna izquierda */
 .left-column {
   flex: 1;
   min-width: 350px;
@@ -27,13 +24,11 @@ html, body {
   overflow: hidden;
 }
 
-/* Encabezado */
 .left-column h1 {
   text-align: center;
   margin-bottom: 10px;
 }
 
-/* Tabla y chat scrollable */
 .table-container,
 .chat-container {
   flex: 1;
@@ -41,7 +36,6 @@ html, body {
   margin-bottom: 20px;
 }
 
-/* Chat específico */
 .chat-messages {
   height: 250px;
   overflow-y: auto;
@@ -50,8 +44,6 @@ html, body {
   border-radius: 4px;
   margin-bottom: 10px;
 }
-
-/* Contenedor del input */
 .chat-input {
   width: 100%;
   padding: 8px;
@@ -59,7 +51,6 @@ html, body {
   border: 1px solid #ccc;
 }
 
-/* Columna derecha */
 .right-column {
   width: 50%;
   min-width: 300px;
@@ -67,7 +58,6 @@ html, body {
   position: relative;
 }
 
-/* Estilos para el contenedor del globo */
 .globe-container {
   position: absolute;
   top: 0;
@@ -76,7 +66,6 @@ html, body {
   right: 0;
 }
 
-/* Ajuste de la tabla */
 .table-container table {
   width: 100%;
 }

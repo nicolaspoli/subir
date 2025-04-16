@@ -17,9 +17,9 @@ const App = () => {
   return (
     <div className="app-container">
       <div className="left-column">
-        <h1>Tarea 2: Houston, we have a problem</h1>
+        <h1>Tarea 2 Nicolás Poli: Houston, we have a problem</h1>
         <SatelliteTable ws={ws} />
-        <Chat />
+        <Chat ws={ws} />
       </div>
       <div className="right-column">
         <GlobeComponent />
