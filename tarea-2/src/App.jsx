@@ -1,49 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import GlobeComponent from './components/Globe';
 import SatelliteTable from './components/SatelliteTable';
 import Chat from './components/Chat';
 import './index.css';
 
 const App = () => {
-  const [websocketData, setWebsocketData] = useState(null);
+  const [ws, setWs] = useState(null);
 
   useEffect(() => {
     const socket = new WebSocket('wss://tarea-2.2025-1.tallerdeintegracion.cl/connect');
+    setWs(socket);
 
-    socket.onopen = () => {
-      console.log('✅ Conectado al WebSocket');
-    };
-
-    socket.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-      if (data.type === 'SATELLITES') {
-        setWebsocketData(data.satellites);
-      }
-    };
-
-    socket.onerror = (error) => {
-      console.error('❌ Error en WebSocket:', error);
-    };
-
-    socket.onclose = () => {
-      console.log('🔌 Conexión WebSocket cerrada');
-    };
-
-    // Limpieza cuando se desmonta
-    return () => {
-      socket.close();
-    };
+    return () => socket.close();
   }, []);
 
   return (
     <div className="app-container">
       <div className="left-column">
         <h1>Tarea 2: Houston, we have a problem</h1>
-        <SatelliteTable data={websocketData} />
-        <Chat data={websocketData} />
+        <SatelliteTable ws={ws} />
+        <Chat />
       </div>
       <div className="right-column">
-        <GlobeComponent data={websocketData} />
+        <GlobeComponent />
       </div>
     </div>
   );
